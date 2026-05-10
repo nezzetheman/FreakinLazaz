@@ -42,11 +42,16 @@ displayName="${mod_name}" #mandatory
 #credits="" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
-#authors=""
+authors="Nezze The Magnficent"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+A mod by Nezze: the magnificent, the chaotic,
+the gammal GenX gremlin som bara refusar to read manualhelveten and writar skitcode like det är 1998.
+
+If it kraschar och skit, it's a feature.
+If det fungerar, ring någon — det är ett mirakel.
+Gilla min mod eller skit i det.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
