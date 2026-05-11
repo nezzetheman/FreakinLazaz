@@ -1,5 +1,6 @@
 package com.nezze.freaknlazaz;
 
+import com.nezze.freaknlazaz.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -65,6 +66,8 @@ public class FreaknLazaz {
         NeoForge.EVENT_BUS.register(this);
         NeoForge.EVENT_BUS.register(PlayerJoinHandler.class);
 
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -92,8 +95,10 @@ public class FreaknLazaz {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(EXAMPLE_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.BISMUTH);
+            event.accept(ModItems.RAW_BISMUTH);
+            event.accept(ModItems.SMIRRES_MOROTAR);
         }
     }
 
